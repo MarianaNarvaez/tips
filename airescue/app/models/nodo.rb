@@ -1,2 +1,0 @@
-class Nodo < ApplicationRecord
-end
