@@ -1,0 +1,78 @@
+Agregar al gemfile
+group :development do
+  gem 'sqlite3'
+
+end
+
+group :production do
+  gem 'rails_12factor'
+  gem 'pg'
+end
+
+-sudo-apt-get update
+//instalar heroku 
+-wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+-git commit -m "subiend el log"
+-rake assets:precompile
+-git commit -m "con assets"
+-heroku login
+-heroku create
+-git push heroku master
+-heroku run rake db:migrate
+-heroku open
+-heroku rename marigym
+
+https://marigym.herokuapp.com/images
+
+
+
+
+for postgres
+Actualiza paquetes pendientes del sistema
+sudo apt-get update
+
+sudo apt-get install postgresql postgresql-contrib
+sudo -i -u postgres
+psql
+postgres@mariana:~$ createuser --interactive
+Enter name of role to add: mari
+Shall the new role be a superuser? (y/n) y
+
+crear base de datos
+postgres@mariana:~$ createdb mari
+CREATE DATABASE "mari_dca" OWNER "mari";
+
+
+
+maybe//sudo adduser sammy
+sudo -u mari psql
+mari=# \conninfo
+
+yum install -y nginx
+
+runnn ruby as a servis centoos 7
+
+ruby 2.4.1p111
+Phusion Passenger 5.1.7
+
+LoadModule passenger_module /home/user1/.rvm/gems/ruby-2.4.1/gems/passenger-5.1.7/buildout/apache2/mod_passenger.so
+    <IfModule mod_passenger.c>
+      PassengerRoot /home/user1/.rvm/gems/ruby-2.4.1/gems/passenger-5.1.7
+      PassengerDefaultRuby /home/user1/.rvm/gems/ruby-2.4.1/wrappers/ruby
+    </IfModule>
+
+
+bundle exec rake secret
+b0b47844c059668717b91b0324a3ff6a65f99c49923301f0ecfd841bfe132878174d8428668565f2d490360853866dad476bb2bd1cb03c81a8b83addc0b394d5
+
+
+
+
+
+
+
+
+
+
+
+
